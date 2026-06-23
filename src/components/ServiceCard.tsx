@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import type { Service } from "@/lib/mockData";
-import { ArrowUpRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 
 export function ServiceCard({ service, expanded = false }: { service: Service; expanded?: boolean }) {
   const Icon = service.icon;
@@ -18,7 +18,6 @@ export function ServiceCard({ service, expanded = false }: { service: Service; e
         <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl border border-white/10 bg-[var(--purple)]/10 text-[var(--purple-soft)] group-hover:text-[var(--gold)] group-hover:border-[var(--gold)]/40 transition-all duration-500 group-hover:rotate-6">
           <Icon size={22} />
         </div>
-        <ArrowUpRight size={18} className="text-white/40 group-hover:text-[var(--gold)] transition-colors" />
       </div>
       <h3 className="relative heading-display text-xl mt-6 text-white">{service.title}</h3>
       <p className="relative mt-3 text-sm text-white/65 leading-relaxed">{service.description}</p>

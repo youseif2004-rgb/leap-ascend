@@ -85,11 +85,11 @@ export const projects: Project[] = [
   { title: "Pluto Fragrance", client: "Pluto Parfum", category: "Web",
     blurb: "AI-powered perfume recommendation system that matches users to luxury scents through a personalized quiz and preference learning.",
     image: "/images/pluto-fragrance.png", tags: ["AI Recommendation", "E-Commerce", "Luxury"],
-    url: "https://www.perfume-pluto.vercel.app" },
+    url: "https://perfume-pluto.vercel.app" },
   { title: "Samar El Azab Dental", client: "Samar El Azab Clinic", category: "Web",
     blurb: "Cutting-edge dental clinic website with online appointment booking and phone-based management dashboard for Shorouk City practice.",
     image: "/images/samar-dental.png", tags: ["Healthcare", "Booking", "Dashboard"],
-    url: "https://www.samar-elazab-dental.vercel.app" },
+    url: "https://samar-elazab-dental.vercel.app" },
 ];
 
 export interface Pricing {
