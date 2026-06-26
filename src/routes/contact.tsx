@@ -105,14 +105,14 @@ function ContactPage() {
                 <li className="flex items-start gap-3 text-white/80">
                   <Mail size={16} className="mt-1 text-[var(--gold)]" />
                   <div>
-                    <p className="text-sm">hello@leap.studio</p>
+                    <a href="mailto:leapsloutions@gmail.com" className="text-sm hover:text-[var(--gold)] transition-colors">leapsloutions@gmail.com</a>
                     <p className="text-xs text-white/45">General & new partnerships</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3 text-white/80">
                   <Phone size={16} className="mt-1 text-[var(--gold)]" />
                   <div>
-                    <p className="text-sm">+20 2 2735 0000</p>
+                    <a href="tel:+201220984499" className="text-sm hover:text-[var(--gold)] transition-colors">+20 122 098 4499</a>
                     <p className="text-xs text-white/45">Sun – Thu · 09:00–19:00 GMT+2</p>
                   </div>
                 </li>

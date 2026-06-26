@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Github, Linkedin, Twitter, Send } from "lucide-react";
+import { Github, Linkedin, Twitter, Send, Mail, Phone } from "lucide-react";
 import { navLinks } from "@/lib/mockData";
 import { Logo } from "./Logo";
 
@@ -13,6 +13,16 @@ export function Footer() {
           <p className="mt-5 text-sm text-white/60 max-w-sm leading-relaxed">
             LEAP is an AI-driven intelligent automation and SaaS partner. We turn ambition into momentum — quietly, premium, on time.
           </p>
+          <ul className="mt-5 space-y-2.5">
+            <li className="flex items-center gap-2.5 text-sm text-white/70">
+              <Mail size={14} className="text-[var(--gold)]" />
+              <a href="mailto:leapsloutions@gmail.com" className="hover:text-[var(--gold)] transition-colors">leapsloutions@gmail.com</a>
+            </li>
+            <li className="flex items-center gap-2.5 text-sm text-white/70">
+              <Phone size={14} className="text-[var(--gold)]" />
+              <a href="tel:+201220984499" className="hover:text-[var(--gold)] transition-colors">+20 122 098 4499</a>
+            </li>
+          </ul>
         </div>
 
         <div>
