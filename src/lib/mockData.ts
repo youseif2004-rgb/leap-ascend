@@ -149,8 +149,8 @@ export const pricing: Pricing[] = [
 ];
 
 export const team = [
-  { name: "Layla Hassan",   role: "Founder & CEO",          avatar: "https://i.pravatar.cc/240?img=47" },
-  { name: "Omar El-Sayed",  role: "Chief Technology Officer", avatar: "https://i.pravatar.cc/240?img=12" },
+  { name: "Reem Abbas",   role: "Founder & CEO",          avatar: "https://i.pravatar.cc/240?img=47" },
+  { name: "Youseif Abdelazim",  role: "Founder & Chief Technology Officer", avatar: "https://i.pravatar.cc/240?img=12" },
   { name: "Nadia Farouk",   role: "Head of AI",             avatar: "https://i.pravatar.cc/240?img=49" },
   { name: "Karim Adel",     role: "Design Director",        avatar: "https://i.pravatar.cc/240?img=33" },
   { name: "Yara Mostafa",   role: "Engineering Lead",       avatar: "https://i.pravatar.cc/240?img=45" },
