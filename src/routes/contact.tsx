@@ -153,7 +153,7 @@ function ContactPage() {
               </ul>
             </div>
 
-            
+            <a
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%27d%20like%20to%20get%20in%20touch%20with%20LEAP.`}
               target="_blank"
               rel="noopener noreferrer"
