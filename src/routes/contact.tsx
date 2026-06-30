@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Mail, MapPin, Phone, Send, Check, Linkedin, Twitter, Github } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Check, Linkedin, Twitter, Github, MessageCircle } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionReveal, RevealItem } from "@/components/SectionReveal";
 
@@ -24,7 +24,7 @@ type Errors = Partial<Record<keyof Form, string>>;
 const EMAILJS_SERVICE_ID = "service_xtlcwp5";
 const EMAILJS_TEMPLATE_ID = "template_450mu9h";
 const EMAILJS_PUBLIC_KEY = "1Q0edviwFp-1gaiZJ";
-const WHATSAPP_NUMBER = "201220984499"; // no + or spaces
+const WHATSAPP_NUMBER = "201220984499";
 
 function ContactPage() {
   const [form, setForm] = useState<Form>({ name: "", email: "", message: "" });
@@ -57,9 +57,6 @@ function ContactPage() {
         },
         EMAILJS_PUBLIC_KEY
       );
-
-      const waMessage = `New contact form submission%0A%0AName: ${encodeURIComponent(form.name)}%0AEmail: ${encodeURIComponent(form.email)}%0AMessage: ${encodeURIComponent(form.message)}`;
-      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${waMessage}`, "_blank");
 
       setSent(true);
       setTimeout(() => { setSent(false); setForm({ name: "", email: "", message: "" }); }, 4000);
@@ -155,6 +152,21 @@ function ContactPage() {
                 </li>
               </ul>
             </div>
+
+            
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%2C%20I%27d%20like%20to%20get%20in%20touch%20with%20LEAP.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-surface p-7 flex items-center gap-4 group hover:border-[var(--gold)] transition-colors"
+            >
+              <span className="w-12 h-12 rounded-full bg-[#25D366]/15 text-[#25D366] inline-flex items-center justify-center shrink-0">
+                <MessageCircle size={22} />
+              </span>
+              <div>
+                <p className="text-white font-semibold text-sm">Chat on WhatsApp</p>
+                <p className="text-white/45 text-xs">Fastest way to reach us directly.</p>
+              </div>
+            </a>
 
             <div className="card-surface p-7">
               <span className="eyebrow">Follow LEAP</span>
