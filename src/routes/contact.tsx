@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Mail, MapPin, Phone, Send, Check, Linkedin, Twitter, Github } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionReveal, RevealItem } from "@/components/SectionReveal";
@@ -20,10 +21,16 @@ export const Route = createFileRoute("/contact")({
 interface Form { name: string; email: string; message: string }
 type Errors = Partial<Record<keyof Form, string>>;
 
+const EMAILJS_SERVICE_ID = "service_xtlcwp5";
+const EMAILJS_TEMPLATE_ID = "template_450mu9h";
+const EMAILJS_PUBLIC_KEY = "1Q0edviwFp-1gaiZJ";
+const WHATSAPP_NUMBER = "201220984499"; // no + or spaces
+
 function ContactPage() {
   const [form, setForm] = useState<Form>({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
 
   function validate(): boolean {
     const e: Errors = {};
@@ -34,11 +41,34 @@ function ContactPage() {
     return Object.keys(e).length === 0;
   }
 
-  function onSubmit(ev: React.FormEvent) {
+  async function onSubmit(ev: React.FormEvent) {
     ev.preventDefault();
     if (!validate()) return;
-    setSent(true);
-    setTimeout(() => { setSent(false); setForm({ name: "", email: "", message: "" }); }, 4000);
+    setSending(true);
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+
+      const waMessage = `New contact form submission%0A%0AName: ${encodeURIComponent(form.name)}%0AEmail: ${encodeURIComponent(form.email)}%0AMessage: ${encodeURIComponent(form.message)}`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${waMessage}`, "_blank");
+
+      setSent(true);
+      setTimeout(() => { setSent(false); setForm({ name: "", email: "", message: "" }); }, 4000);
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      alert("Something went wrong sending your message. Please try again or email us directly.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -91,8 +121,8 @@ function ContactPage() {
 
               <div className="flex items-center justify-between pt-2">
                 <p className="text-xs text-white/40">We reply within one business day.</p>
-                <button type="submit" className="btn-primary">
-                  Send message <Send size={14} />
+                <button type="submit" disabled={sending} className="btn-primary disabled:opacity-50">
+                  {sending ? "Sending..." : "Send message"} <Send size={14} />
                 </button>
               </div>
             </form>
