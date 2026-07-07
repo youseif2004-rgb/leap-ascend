@@ -19,6 +19,11 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "LEAP — AI Automation & Custom AI Agents | Cairo, Egypt" },
       { property: "og:description", content: "LEAP designs and builds AI automation, custom AI agents, and SaaS products for ambitious businesses in Egypt and the MENA region." },
     ],
+    links: [
+      { rel: "alternate", hreflang: "en", href: "https://www.leaptech.solutions/" },
+      { rel: "alternate", hreflang: "ar", href: "https://www.leaptech.solutions/ar" },
+      { rel: "alternate", hreflang: "x-default", href: "https://www.leaptech.solutions/" },
+    ],
   }),
   component: HomePage,
 });
