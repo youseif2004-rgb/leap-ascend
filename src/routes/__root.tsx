@@ -66,6 +66,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "LEAP — Where Ambition Takes Flight" },
       { name: "description", content: "LEAP is an AI-driven intelligent automation and SaaS solutions partner. We turn ambition into momentum." },
       { name: "author", content: "LEAP" },
+      { name: "google-site-verification", content: "225_T5du6KIqJKhOFS5i5mH_ogCvB92wySuiUSKGW4Y" },
       { property: "og:title", content: "LEAP — Where Ambition Takes Flight" },
       { property: "og:description", content: "LEAP is an AI-driven intelligent automation and SaaS solutions partner. We turn ambition into momentum." },
       { property: "og:type", content: "website" },
