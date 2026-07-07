@@ -184,6 +184,24 @@ function ArabicHomePage() {
           </div>
         </div>
       </section>
+<section className="py-28">
+        <div className="container-x">
+          <div className="relative overflow-hidden rounded-3xl p-12 md:p-20 text-center"
+            style={{ background: "linear-gradient(135deg, #2c1f6b 0%, #0b1020 70%)" }}
+          >
+            <span className="eyebrow">فصلك القادم</span>
+            <h2 className="heading-display gradient-text mt-4 text-4xl md:text-6xl">هل أنت مستعد لأخذ القفزة؟</h2>
+            <p className="relative mt-6 max-w-xl mx-auto text-white/70">
+              مكالمة واحدة. سنحدد أقوى خطوة ذكاء اصطناعي يمكنك اتخاذها وكيفية تنفيذها خلال ربع سنة.
+            </p>
+            <div className="relative mt-10 flex items-center justify-center">
+              <Link to="/contact" className="btn-gold text-base">
+                ابدأ المحادثة <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
