@@ -151,8 +151,11 @@ function ArabicHomePage() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <a href="https://perfume-pluto.vercel.app" target="_blank" rel="noopener noreferrer" className="card-surface p-8 block hover:border-[var(--gold)]/40 transition-colors">
-              <span className="text-xs uppercase tracking-[0.2em] text-[var(--gold)]">ويب</span>
-              <h3 className="heading-display text-2xl text-white mt-3">Pluto Fragrance</h3>
+              <div className="aspect-video rounded-xl overflow-hidden mb-5 bg-black/20">
+     <img src="/images/pluto-fragrance.png" alt="Pluto Fragrance" className="w-full h-full object-cover" />
+   </div>
+   <span className="text-xs uppercase tracking-[0.2em] text-[var(--gold)]">ويب</span>
+   <h3 className="heading-display text-2xl text-white mt-3">Pluto Fragrance</h3>
               <p className="mt-3 text-white/65 text-sm leading-relaxed">
                 نظام توصية عطور مدعوم بالذكاء الاصطناعي يربط المستخدمين بأفخم العطور من خلال اختبار شخصي وتعلّم تفضيلاتهم.
               </p>
@@ -164,8 +167,11 @@ function ArabicHomePage() {
             </a>
 
             <a href="https://samar-elazab-dental.vercel.app" target="_blank" rel="noopener noreferrer" className="card-surface p-8 block hover:border-[var(--gold)]/40 transition-colors">
-              <span className="text-xs uppercase tracking-[0.2em] text-[var(--gold)]">ويب</span>
-              <h3 className="heading-display text-2xl text-white mt-3">Samar El Azab Dental</h3>
+              <div className="aspect-video rounded-xl overflow-hidden mb-5 bg-black/20">
+     <img src="/images/samar-dental.png" alt="Samar El Azab Dental" className="w-full h-full object-cover" />
+   </div>
+   <span className="text-xs uppercase tracking-[0.2em] text-[var(--gold)]">ويب</span>
+   <h3 className="heading-display text-2xl text-white mt-3">Samar El Azab Dental</h3>
               <p className="mt-3 text-white/65 text-sm leading-relaxed">
                 موقع عيادة أسنان متطور مع نظام حجز مواعيد عبر الإنترنت ولوحة تحكم إدارية عبر الهاتف لعيادة في مدينة الشروق.
               </p>
