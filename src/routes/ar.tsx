@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Logo } from "@/components/Logo";
+import { Brain, Workflow, Bot, Cloud, LineChart, Sparkles as SparklesIcon } from "lucide-react";
 
 export const Route = createFileRoute("/ar")({
   head: () => ({
@@ -94,6 +95,48 @@ function ArabicHomePage() {
             <div className="absolute inset-0 rounded-full" style={{ background: "radial-gradient(circle, rgba(109,74,255,0.35), transparent 65%)", filter: "blur(40px)" }} />
             <div className="relative flex items-center justify-center w-full h-full">
               <Logo size={120} withWordmark={false} />
+            </div>
+          </div>
+        </div>
+      </section>
+<section className="py-28">
+        <div className="container-x">
+          <div className="mb-14">
+            <span className="eyebrow">ماذا نقدم</span>
+            <h2 className="heading-display gradient-text mt-3 text-4xl md:text-5xl max-w-2xl">
+              شريك ذكاء اصطناعي متكامل.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="card-surface p-8">
+              <Brain size={28} className="text-[var(--gold)]" />
+              <h3 className="heading-display text-xl text-white mt-4">استراتيجية واستشارات الذكاء الاصطناعي</h3>
+              <p className="mt-3 text-white/65 text-sm leading-relaxed">نحدد أين يخلق الذكاء الاصطناعي قيمة حقيقية في عملك — ثم نبني خارطة الطريق لتحقيقها.</p>
+            </div>
+            <div className="card-surface p-8">
+              <Workflow size={28} className="text-[var(--gold)]" />
+              <h3 className="heading-display text-xl text-white mt-4">الأتمتة الذكية</h3>
+              <p className="mt-3 text-white/65 text-sm leading-relaxed">استبدل العمل اليدوي المتكرر بسير عمل ذكي يتعلم ويقرر ويتوسع معك.</p>
+            </div>
+            <div className="card-surface p-8">
+              <Bot size={28} className="text-[var(--gold)]" />
+              <h3 className="heading-display text-xl text-white mt-4">وكلاء ذكاء اصطناعي مخصصون</h3>
+              <p className="mt-3 text-white/65 text-sm leading-relaxed">وكلاء مدربون على مجال عملك يعملون داخل أدواتك — المبيعات والدعم والعمليات — لزيادة الإنتاجية بهدوء.</p>
+            </div>
+            <div className="card-surface p-8">
+              <Cloud size={28} className="text-[var(--gold)]" />
+              <h3 className="heading-display text-xl text-white mt-4">هندسة منتجات SaaS</h3>
+              <p className="mt-3 text-white/65 text-sm leading-relaxed">من الفكرة إلى الإطلاق وحتى التوسع — نبني منتجات احترافية بجودة استوديوهات النخبة.</p>
+            </div>
+            <div className="card-surface p-8">
+              <LineChart size={28} className="text-[var(--gold)]" />
+              <h3 className="heading-display text-xl text-white mt-4">البيانات والتحليلات</h3>
+              <p className="mt-3 text-white/65 text-sm leading-relaxed">حوّل بياناتك الخام إلى نظام تشغيل لقراراتك — بأنابيب بيانات نظيفة ولوحات تحكم دقيقة.</p>
+            </div>
+            <div className="card-surface p-8">
+              <SparklesIcon size={28} className="text-[var(--gold)]" />
+              <h3 className="heading-display text-xl text-white mt-4">تجارب توليدية بالذكاء الاصطناعي</h3>
+              <p className="mt-3 text-white/65 text-sm leading-relaxed">أطلق تجارب ذكاء اصطناعي للعملاء تبدو أصيلة وسريعة وفاخرة بلا شك.</p>
             </div>
           </div>
         </div>
