@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/ar")({
   head: () => ({
@@ -15,8 +16,9 @@ function ArabicHomePage() {
   return (
     <div dir="rtl">
       <section className="relative min-h-[100dvh] flex items-center pt-20 pb-8 md:pt-24">
-        <div className="container-x">
-          <span className="eyebrow text-xs sm:text-sm">
+        <div className="container-x grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-16 items-center">
+       <div>
+         <span className="eyebrow text-xs sm:text-sm">
             <Sparkles size={10} className="text-[var(--gold)]" />
             حلول ذكية · تأسست عام 2015
           </span>
@@ -27,7 +29,7 @@ function ArabicHomePage() {
           </h1>
 
           <p className="mt-4 sm:mt-7 max-w-full sm:max-w-xl text-sm sm:text-base md:text-lg text-white/70 leading-relaxed">
-            ليب هي الشريك الذكي للأتمتة وحلول SaaS للشركات التي لم تعد تنتظر. نصمم ونبني ونشغّل برمجيات ذكية تراكم تقدمك بهدوء، أسبوعًا بعد أسبوع.
+            ليب هي الشريك الذكي للأتمتة وحلول SaaS للشركات التي لم تعد تنتظر. نصمم ونبني ونشغّل برمجيات ذكية تراقب تقدمك بهدوء، أسبوعًا بعد أسبوع.
           </p>
 
           <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
@@ -43,9 +45,16 @@ function ArabicHomePage() {
               نستقبل حجوزات الربع الثالث
             </div>
             <span>SOC 2 · ISO 27001</span>
-          </div>
-        </div>
-      </section>
+           </div>
+         </div>
+
+         <div className="relative flex items-center justify-center py-4 sm:py-6 md:py-8 lg:py-0">
+           <div className="relative scale-[1.2] sm:scale-[1.6] md:scale-[2] lg:scale-[3.2] origin-center">
+             <Logo size={120} withWordmark={false} />
+           </div>
+         </div>
+       </div>
+       </section>
     </div>
   );
 }
