@@ -14,10 +14,10 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "LEAP — Where Ambition Takes Flight" },
-      { name: "description", content: "AI-driven intelligent automation and SaaS solutions for ambitious teams. LEAP turns momentum into altitude." },
-      { property: "og:title", content: "LEAP — Where Ambition Takes Flight" },
-      { property: "og:description", content: "AI-driven intelligent automation and SaaS solutions for ambitious teams." },
+      { title: "LEAP — AI Automation & Custom AI Agents | Cairo, Egypt" },
+      { name: "description", content: "LEAP designs and builds AI automation, custom AI agents, and SaaS products for ambitious businesses in Egypt and the MENA region." },
+      { property: "og:title", content: "LEAP — AI Automation & Custom AI Agents | Cairo, Egypt" },
+      { property: "og:description", content: "LEAP designs and builds AI automation, custom AI agents, and SaaS products for ambitious businesses in Egypt and the MENA region." },
     ],
   }),
   component: HomePage,
