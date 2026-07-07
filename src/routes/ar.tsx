@@ -141,6 +141,43 @@ function ArabicHomePage() {
           </div>
         </div>
       </section>
+<section className="py-28">
+        <div className="container-x">
+          <div className="mb-14">
+            <span className="eyebrow">أعمال مختارة</span>
+            <h2 className="heading-display gradient-text mt-3 text-4xl md:text-5xl max-w-2xl">
+              برمجيات هادئة، نتائج صاخبة.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <a href="https://perfume-pluto.vercel.app" target="_blank" rel="noopener noreferrer" className="card-surface p-8 block hover:border-[var(--gold)]/40 transition-colors">
+              <span className="text-xs uppercase tracking-[0.2em] text-[var(--gold)]">ويب</span>
+              <h3 className="heading-display text-2xl text-white mt-3">Pluto Fragrance</h3>
+              <p className="mt-3 text-white/65 text-sm leading-relaxed">
+                نظام توصية عطور مدعوم بالذكاء الاصطناعي يربط المستخدمين بأفخم العطور من خلال اختبار شخصي وتعلّم تفضيلاتهم.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                <span className="text-xs px-3 py-1 rounded-full border border-white/15 text-white/60">توصيات الذكاء الاصطناعي</span>
+                <span className="text-xs px-3 py-1 rounded-full border border-white/15 text-white/60">تجارة إلكترونية</span>
+                <span className="text-xs px-3 py-1 rounded-full border border-white/15 text-white/60">فخامة</span>
+              </div>
+            </a>
+
+            <a href="https://samar-elazab-dental.vercel.app" target="_blank" rel="noopener noreferrer" className="card-surface p-8 block hover:border-[var(--gold)]/40 transition-colors">
+              <span className="text-xs uppercase tracking-[0.2em] text-[var(--gold)]">ويب</span>
+              <h3 className="heading-display text-2xl text-white mt-3">Samar El Azab Dental</h3>
+              <p className="mt-3 text-white/65 text-sm leading-relaxed">
+                موقع عيادة أسنان متطور مع نظام حجز مواعيد عبر الإنترنت ولوحة تحكم إدارية عبر الهاتف لعيادة في مدينة الشروق.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                <span className="text-xs px-3 py-1 rounded-full border border-white/15 text-white/60">رعاية صحية</span>
+                <span className="text-xs px-3 py-1 rounded-full border border-white/15 text-white/60">حجز مواعيد</span>
+                <span className="text-xs px-3 py-1 rounded-full border border-white/15 text-white/60">لوحة تحكم</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
