@@ -12,6 +12,22 @@ export function Navbar() {
   const isArabic = pathname.startsWith("/ar");
   const otherLangPath = isArabic ? "/" : "/ar";
   const otherLangLabel = isArabic ? "EN" : "AR";
+  const translatedPaths = ["/about"]; // add more paths here as we build their Arabic versions
+
+     function localizedPath(path: string) {
+       if (isArabic) {
+         const enPath = path.replace(/^\/ar/, "") || "/";
+         return enPath;
+       }
+       if (translatedPaths.includes(path)) return "/ar" + path;
+       if (path === "/") return "/ar";
+       return path; // not translated yet, stays English
+     }
+
+     const currentEnPath = isArabic ? (pathname.replace(/^\/ar/, "") || "/") : pathname;
+     const switcherTarget = isArabic
+       ? currentEnPath
+       : (translatedPaths.includes(pathname) ? "/ar" + pathname : (pathname === "/" ? "/ar" : pathname));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -39,7 +55,7 @@ export function Navbar() {
             {navLinks.map((l) => (
               <Link
                 key={l.to}
-                to={l.to}
+                to={localizedPath(l.to)}
                 activeOptions={{ exact: l.to === "/" }}
                 className="link-underline text-sm font-medium text-white/80 hover:text-white transition-colors"
                 activeProps={{ className: "link-underline text-white" }}
@@ -50,7 +66,7 @@ export function Navbar() {
           </nav>
 
           <div className="hidden lg:flex items-center">
-            <Link to={otherLangPath} className="btn-outline text-xs mr-3">{otherLangLabel}</Link>
+            <Link to={switcherTarget} className="btn-outline text-xs mr-3">{otherLangLabel}</Link>
             <Link to="/contact" className="btn-primary text-xs">
               Get Started
             </Link>
@@ -83,13 +99,13 @@ export function Navbar() {
                   variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0 } }}
                   transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <Link to={l.to} className="heading-display text-3xl text-white">
+                  <Link to={localizedPath(l.to)} className="heading-display text-3xl text-white">
                     {l.label}
                   </Link>
                 </motion.div>
               ))}
               <motion.div variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0 } }}>
-              <Link to={otherLangPath} className="btn-outline">{otherLangLabel}</Link>
+              <Link to={switcherTarget} className="btn-outline">{otherLangLabel}</Link>
               </motion.div>
               <motion.div variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0 } }}>
                 <Link to="/contact" className="btn-primary mt-2">Get Started</Link>
