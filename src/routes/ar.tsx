@@ -9,6 +9,11 @@ export const Route = createFileRoute("/ar")({
       { title: "ليب — أتمتة الذكاء الاصطناعي وحلول SaaS | القاهرة، مصر" },
       { name: "description", content: "ليب تصمم وتبني حلول أتمتة الذكاء الاصطناعي والوكلاء الذكية ومنتجات SaaS للشركات الطموحة في مصر ومنطقة الشرق الأوسط." },
     ],
+    links: [
+      { rel: "alternate", hreflang: "en", href: "https://www.leaptech.solutions/" },
+      { rel: "alternate", hreflang: "ar", href: "https://www.leaptech.solutions/ar" },
+      { rel: "alternate", hreflang: "x-default", href: "https://www.leaptech.solutions/" },
+    ],
   }),
   component: ArabicHomePage,
 });
