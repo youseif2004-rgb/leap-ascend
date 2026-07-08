@@ -9,6 +9,9 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isArabic = pathname.startsWith("/ar");
+  const otherLangPath = isArabic ? "/" : "/ar";
+  const otherLangLabel = isArabic ? "EN" : "AR";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -47,6 +50,7 @@ export function Navbar() {
           </nav>
 
           <div className="hidden lg:flex items-center">
+            <Link to={otherLangPath} className="btn-outline text-xs mr-3">{otherLangLabel}</Link>
             <Link to="/contact" className="btn-primary text-xs">
               Get Started
             </Link>
@@ -84,6 +88,9 @@ export function Navbar() {
                   </Link>
                 </motion.div>
               ))}
+              <motion.div variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0 } }}>
+              <Link to={otherLangPath} className="btn-outline">{otherLangLabel}</Link>
+              </motion.div>
               <motion.div variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0 } }}>
                 <Link to="/contact" className="btn-primary mt-2">Get Started</Link>
               </motion.div>
