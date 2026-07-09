@@ -1,0 +1,36 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hexStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B7CF6"/>
+      <stop offset="50%" stop-color="#B39DDB"/>
+      <stop offset="100%" stop-color="#E0C88A"/>
+    </linearGradient>
+    <linearGradient id="bgFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A1F5E"/>
+      <stop offset="100%" stop-color="#4B2E83"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#6D4FC7" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#2A1F5E" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect x="0" y="0" width="512" height="512" rx="112" fill="url(#glow)"/>
+
+  <!-- Hexagon outline -->
+  <polygon points="256,86 391,166 391,346 256,426 121,346 121,166"
+           fill="none" stroke="url(#hexStroke)" stroke-width="14" stroke-linejoin="round"/>
+
+  <!-- Corner dots -->
+  <circle cx="256" cy="86" r="15" fill="#C9B6F5"/>
+  <circle cx="391" cy="166" r="15" fill="#D7CBEA"/>
+  <circle cx="391" cy="346" r="15" fill="#E0C88A"/>
+  <circle cx="256" cy="426" r="15" fill="#E8CE8C"/>
+  <circle cx="121" cy="346" r="15" fill="#D7C08F"/>
+  <circle cx="121" cy="166" r="15" fill="#C9B6F5"/>
+
+  <!-- Letter A -->
+  <path d="M 256 168 L 336 360 L 300 360 L 283 316 L 229 316 L 212 360 L 176 360 Z M 243 284 L 269 284 L 256 250 Z"
+        fill="#FFFFFF"/>
+</svg>

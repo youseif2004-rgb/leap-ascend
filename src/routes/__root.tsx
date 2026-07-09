@@ -78,11 +78,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/42d27233-9370-45fb-b323-94bfeccdb929/id-preview-0994d79b--dff7d110-40fd-49ba-be8d-3edea6bf5740.lovable.app-1781292410323.png" },
     ],
     links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" },
-    ],
+  { rel: "stylesheet", href: appCss },
+  { rel: "icon", href: "/favicon.ico", sizes: "any" },
+  { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+  { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+  { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+  { rel: "preconnect", href: "https://fonts.googleapis.com" },
+  { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+  { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" },
+],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -93,7 +97,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="dark">
-      <head><HeadContent /></head>
+      <head>
+        <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "LEAP",
+              url: "https://www.leaptech.solutions",
+              logo: "https://www.leaptech.solutions/favicon.ico",
+              description: "LEAP builds websites, online stores, AI automation, and SaaS products for ambitious businesses in Egypt and the MENA region.",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Cairo",
+                addressCountry: "EG",
+              },
+              telephone: "+201220984499",
+              email: "leapsloutions@gmail.com",
+              sameAs: [
+                "https://www.instagram.com/leaptech.solutions/",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body>
         {children}
         <Scripts />
