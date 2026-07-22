@@ -139,7 +139,7 @@ function AnimatedOutlet() {
   }, [pathname]);
 
   return (
-    <AnimatePresence initial={false}>
+    <AnimatePresence initial={false} mode="popLayout">
       <motion.main
         key={pathname}
         initial={{ opacity: 0, y: 12 }}
