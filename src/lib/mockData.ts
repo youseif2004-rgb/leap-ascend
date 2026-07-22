@@ -121,7 +121,7 @@ export const projects: Project[] = [
       "Bilingual investor-matching platform for the Egyptian real estate market — instant shortlists from live-style inventory, WhatsApp campaign tools, agent performance scoring, and an AI assistant that answers only from project data. A concept build showcasing our approach; production deployments are custom per client.",
     image: "/images/leap-property-match.png",
     tags: ["AI Matching", "Real Estate", "Proof of Concept"],
-    url: "https://leap-property-match-1.vercel.app",
+    url: "https://leap-property-match.vercel.app/",
   },
   {
     title: "Samar El Azab Dental",
