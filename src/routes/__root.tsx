@@ -139,7 +139,7 @@ function AnimatedOutlet() {
   }, [pathname]);
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <AnimatePresence initial={false}>
       <motion.main
         key={pathname}
         initial={{ opacity: 0, y: 12 }}
